@@ -3,4 +3,5 @@ version: '2'
 services:
   web:
     volumes:
-      - .:/app
+      - ./:/app
+    entrypoint: watchmedo auto-restart --recursive --pattern="*.py" --directory="." python app.py

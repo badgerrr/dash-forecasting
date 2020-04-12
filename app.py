@@ -29,6 +29,25 @@ app.layout = html.Div(children=[
     dcc.Graph(
         id='example-graph2'
     ),
+    html.Label('Multi-Select Dropdown'),
+    dcc.Dropdown(
+        options=[
+            {'label': 'New York City', 'value': 'NYC'},
+            {'label': u'Montréal', 'value': 'MTL'},
+            {'label': 'San Francisco', 'value': 'SF'}
+        ],
+        value=['MTL', 'SF'],
+        multi=True
+    ),
+    html.Label('Radio Items test'),
+    dcc.RadioItems(
+        options=[
+            {'label': 'New York City', 'value': 'NYC'},
+            {'label': u'Montréal', 'value': 'MTL'},
+            {'label': 'San Francisco', 'value': 'SF'}
+        ],
+        value='MTL'
+    ),
 ])
 
 
