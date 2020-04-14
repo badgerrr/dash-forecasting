@@ -20,3 +20,8 @@ Moreover, analysts typically do have experience with regression and are easily a
 Automatic forecasting has a long history, with many methods tailored to specific types of time series (Tashman & Leach 1991, De Gooijer
 Hyndman 2006).  Our approach is driven  by  both  the  nature  of  the  time  series  we  forecast  at  Facebook  (piecewise  trends, multiple
 seasonality, floating holidays) as well as the challenges involved in forecasting at scale
+
+
+## Hierarchical Index
+
+Could be used to solve the issue of forecasting between grains of data. [See here](https://chrisalbon.com/python/data_wrangling/pandas_hierarchical_data/)
