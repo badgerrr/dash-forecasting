@@ -2,11 +2,8 @@ version: '2'
 services:
   web:
     build: .
+    volumes:
+      - ./:/app
+    entrypoint: watchmedo auto-restart --recursive --pattern="*.py" --directory="." python app.py
     ports:
     - "8050:8050"
-    volumes:
-      - ./:/app
-    entrypoint: watchmedo auto-restart --recursive --pattern="*.py" --directory="." python app.py
-    volumes:
-      - ./:/app
-    entrypoint: watchmedo auto-restart --recursive --pattern="*.py" --directory="." python app.py

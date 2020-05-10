@@ -1,6 +1,4 @@
-FROM python:3.6-slim
-
-EXPOSE 8050
+FROM python:3.6-slim as builder
 
 RUN mkdir /app
 WORKDIR /app
@@ -13,4 +11,10 @@ RUN pip install -e .
 
 COPY . /app
 
-ENTRYPOINT python ./app.py
+EXPOSE 8050
+
+# ENTRYPOINT python ./app.py
+
+# FROM nginx
+
+# COPY --from=builder
